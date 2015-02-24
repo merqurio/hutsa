@@ -1,0 +1,25 @@
+{
+  "name": "min-menu",
+  "version": "0.1",
+  "homepage": "https://github.com/merqurio/min-menu",
+  "authors": [
+    "Gabi de Maeztu <gabriel.maeztu@gmail.com>"
+  ],
+  "description": "A minimalistic header with two menus",
+  "main": "menu.css",
+  "keywords": [
+    "menu",
+    "header"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.2"
+  }
+}
