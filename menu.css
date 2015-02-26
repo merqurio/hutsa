@@ -2,9 +2,13 @@
 Main wrapper
 ----------------------------------- */
 .menu-nav {
-    position: absolute;
+    position: fixed; 
     top: 0;
-    width: 100%
+    width: 100%;
+    z-index: 10;
+    -webkit-box-shadow: 0 0px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0px 3px rgba(0,0,0,0.3);
+    box-shadow: 0 0px 3px rgba(0,0,0,0.3);
 }
 
 .menu-block {
@@ -208,6 +212,7 @@ Submenu - menu listing
     vertical-align: top;
     height: 50px;
     margin-left: 1em;
+    cursor: pointer;
 }
 
 .menu-bottom-list li:last-child{
@@ -219,14 +224,14 @@ Submenu - menu listing
 }
 
 .menu-bottom-list li a {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
     opacity: 0;
     line-height: 50px;
     color: #7D7D7D;
     text-decoration: none;
     letter-spacing: 0.8px;
-    font-weight: 100;
+    font-weight: 300;
     -webkit-transition: opacity 0.2s 0.2s ease,-webkit-transform 0.4s 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); 
     transition: opacity 0.2s 0.2s ease,transform 0.4s 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
