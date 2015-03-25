@@ -1,6 +1,6 @@
 {
   "name": "Hutsa",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "homepage": "https://github.com/merqurio/hutsa",
   "authors": [
     "Gabi de Maeztu <gabriel.maeztu@gmail.com>"
@@ -18,8 +18,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "normalize.css": "~3.0.2"
-  }
+  ]
 }

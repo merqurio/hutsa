@@ -1,21 +1,20 @@
 /* -----------------------------------
 Main wrapper
 ----------------------------------- */
+
 .menu-nav {
-    position: fixed; 
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
-    -webkit-box-shadow: 0 0px 3px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0 0px 3px rgba(0,0,0,0.3);
-    box-shadow: 0 0px 3px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(50, 50, 50, .25);
+    -moz-box-shadow: 0 1px 1px 0 rgba(50, 50, 50, .25);
+    box-shadow: 0 1px 1px 0 rgba(50, 50, 50, .25);
 }
-
 .menu-block {
     height: 50px;
     background-color: #E0E0E0;
 }
-
 /* -----------------------------------
 Button Styling for Icons
 ----------------------------------- */
@@ -44,19 +43,16 @@ Button Styling for Icons
     -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transition: transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     outline: none;
-    -webkit-tap-highlight-color: rgba(255,255,255,0);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
-    
 }
-
-.menu-icon.open, .menu-icon-lang.open{
+.menu-icon.open, .menu-icon-lang.open {
     -webkit-transform: translateZ(0) rotate(90deg);
     -ms-transform: translateZ(0) rotate(90deg);
     transform: translateZ(0) rotate(90deg);
     -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transition: transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 }
-
 .menu-text-replace {
     position: absolute;
     height: 1px;
@@ -64,7 +60,6 @@ Button Styling for Icons
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
 }
-
 /* -----------------------------------
 Positioning of buttons
 ----------------------------------- */
@@ -73,12 +68,22 @@ Positioning of buttons
     position: absolute;
     float: none;
     top: 0;
-    left: 50%;
+    left: calc(50% - 10px);
     height: 50px;
-    width: 50px;
+    width: 60px;
     margin-left: -25px;
 }
-
+.menu-logo img {
+    position: absolute;
+    top: 50%;
+    height: 30px;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 .menu-lang {
     position: absolute;
     float: none;
@@ -87,7 +92,6 @@ Positioning of buttons
     width: 50px;
     height: 50px;
 }
-
 .hambicon {
     position: absolute;
     left: 0;
@@ -100,83 +104,67 @@ Positioning of buttons
     transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     font-size: 18px;
 }
-
-
 /* -----------------------------------
 Hamburger icon animation
 ----------------------------------- */
 
-
-
-.open .hambicon-top{
+.open .hambicon-top {
     -webkit-transform: translateZ(0) rotate(45deg);
     -ms-transform: translateZ(0) rotate(45deg);
     transform: translateZ(0) rotate(45deg);
 }
-
-.open .hambicon-bottom{
+.open .hambicon-bottom {
     -webkit-transform: translateZ(0) rotate(-45deg);
     -ms-transform: translateZ(0) rotate(-45deg);
     transform: translateZ(0) rotate(-45deg);
 }
-
-
 .hambicon-rect {
     left: 0;
     top: 0;
     -webkit-transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
 }
-
 .hambicon-rect-top {
     webkit-transform: translate3d(0, -8px, 0);
     -ms-transform: translate3d(0, -8px, 0);
     transform: translate3d(0, -8px, 0);
 }
-
 .open .hambicon-rect-top {
     -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
-
 .hambicon-rect-bottom {
     -webkit-transform: translate3d(0, 8px, 0);
     -ms-transform: translate3d(0, 8px, 0);
     transform: translate3d(0, 8px, 0);
 }
-
 .open .hambicon-rect-bottom {
     -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
-
 /* -----------------------------------
 Sub menu
 ----------------------------------- */
 
 .menu-bottom {
     height: 0;
-    -webkit-transition: height 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99),z-index 0.1s 0s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transition: height 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99),z-index 0.1s 0s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    -webkit-transition: height 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99), z-index 0.1s 0s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition: height 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99), z-index 0.1s 0s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     white-space: nowrap;
     overflow: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
-
 .menu-bottom.left-opened {
     height: 50px;
     border-top: solid 1px #d4d4d4;
 }
-
 .menu-bottom.right-opened {
     height: 50px;
     border-top: solid 1px #d4d4d4;
 }
-
-
 /* -----------------------------------
 Submenu - menu listing
 ----------------------------------- */
@@ -184,28 +172,26 @@ Submenu - menu listing
 .menu-bottom-list {
     width: auto;
     height: 50px;
-    margin:0;
+    margin: 0;
     visibility: hidden;
     padding-left: 10px;
 }
 .left-opened .menu-bottom-main, .right-opened .menu-bottom-lang {
     visibility: visible;
 }
-
 /* Hacks Scrollbar problem*/
-.right-opened .menu-bottom-main{
+
+.right-opened .menu-bottom-main {
     display: none;
 }
-
 /* Hacks Scrollbar problem*/
-.left-opened .menu-bottom-lang{
+
+.left-opened .menu-bottom-lang {
     display: none;
 }
-
 .right-opened .menu-bottom-lang {
     float: right;
 }
-
 .menu-bottom-list li {
     display: inline-block;
     text-align: center;
@@ -214,17 +200,14 @@ Submenu - menu listing
     margin-left: 1em;
     cursor: pointer;
 }
-
-.menu-bottom-list li:last-child{
+.menu-bottom-list li:last-child {
     margin-right: 1em;
 }
-
 .left-opened .menu-bottom-main li a, .right-opened .menu-bottom-lang li a {
     opacity: 1;
 }
-
 .menu-bottom-list li a {
-    font-family: "Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     opacity: 0;
     line-height: 50px;
@@ -232,10 +215,9 @@ Submenu - menu listing
     text-decoration: none;
     letter-spacing: 0.8px;
     font-weight: 300;
-    -webkit-transition: opacity 0.2s 0.2s ease,-webkit-transform 0.4s 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); 
-    transition: opacity 0.2s 0.2s ease,transform 0.4s 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transition: opacity 0.2s 0.2s ease, -webkit-transform 0.4s 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: opacity 0.2s 0.2s ease, transform 0.4s 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
 .menu-bottom-list li a:hover {
     color: #bcbcbc;
 }
