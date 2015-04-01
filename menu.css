@@ -125,7 +125,7 @@ Hamburger icon animation
     transition: transform 0.2s;
 }
 .hambicon-rect-top {
-    webkit-transform: translate3d(0, -8px, 0);
+    -webkit-transform: translate3d(0, -8px, 0);
     -ms-transform: translate3d(0, -8px, 0);
     transform: translate3d(0, -8px, 0);
 }
