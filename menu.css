@@ -159,10 +159,12 @@ Sub menu
 }
 .menu-bottom.left-opened {
     height: 50px;
+    overflow-x: hidden;
     border-top: solid 1px #d4d4d4;
 }
 .menu-bottom.right-opened {
     height: 50px;
+    overflow-x: hidden;
     border-top: solid 1px #d4d4d4;
 }
 /* -----------------------------------
